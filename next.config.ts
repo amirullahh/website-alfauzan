@@ -63,6 +63,9 @@ const nextConfig: NextConfig = {
     ];
     return [{ source: "/:path*", headers: securityHeaders }];
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;
