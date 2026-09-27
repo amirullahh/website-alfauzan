@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+
+/* ============================================
+   Shared CSS Variables (shadcn/ui + website)
+   ============================================ */
+:root {
+  --background: #FAFAF9;
+  --foreground: #1C1917;
+  --card: #FFFFFF;
+  --card-foreground: #1C1917;
+  --popover: #FFFFFF;
+  --popover-foreground: #1C1917;
+  --primary: #0F766E;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F5F5F4;
+  --secondary-foreground: #1C1917;
+  --muted: #F5F5F4;
+  --muted-foreground: #78716C;
+  --accent: #D4A017;
+  --accent-foreground: #1C1917;
+  --destructive: #EF4444;
+  --border: #E7E5E4;
+  --input: #E7E5E4;
+  --ring: #0F766E;
+  --radius: 0.625rem;
+  --chart-1: #0F766E;
+  --chart-2: #D4A017;
+  --chart-3: #78716C;
+  --chart-4: #1C1917;
+  --chart-5: #E7E5E4;
+  --sidebar: #FAFAF9;
+  --sidebar-foreground: #1C1917;
+  --sidebar-primary: #0F766E;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F5F5F4;
+  --sidebar-accent-foreground: #1C1917;
+  --sidebar-border: #E7E5E4;
+  --sidebar-ring: #0F766E;
+
+  /* Absensi-specific status colors */
+  --status-hadir: #16A34A;
+  --status-izin: #D97706;
+  --status-alpa: #DC2626;
+}
+
+.dark {
+  --background: #0C0A09;
+  --foreground: #FAFAF9;
+  --card: #292524;
+  --card-foreground: #FAFAF9;
+  --popover: #292524;
+  --popover-foreground: #FAFAF9;
+  --primary: #2DD4BF;
+  --primary-foreground: #1C1917;
+  --secondary: #44403C;
+  --secondary-foreground: #FAFAF9;
+  --muted: #44403C;
+  --muted-foreground: #A8A29E;
+  --accent: #FACC15;
+  --accent-foreground: #1C1917;
+  --destructive: #EF4444;
+  --border: #44403C;
+  --input: #44403C;
+  --ring: #2DD4BF;
+  --chart-1: #2DD4BF;
+  --chart-2: #FACC15;
+  --chart-3: #A8A29E;
+  --chart-4: #FAFAF9;
+  --chart-5: #44403C;
+  --sidebar: #292524;
+  --sidebar-foreground: #FAFAF9;
+  --sidebar-primary: #2DD4BF;
+  --sidebar-primary-foreground: #1C1917;
+  --sidebar-accent: #44403C;
+  --sidebar-accent-foreground: #FAFAF9;
+  --sidebar-border: #44403C;
+  --sidebar-ring: #2DD4BF;
+}
+
+/* ============================================
+   Base styles
+   ============================================ */
+@layer base {
+  * {
+    @apply border-[var(--border)];
+  }
+  html,
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', var(--font-plus-jakarta), sans-serif;
+  }
+  body {
+    overscroll-behavior: none;
+    background-color: var(--background, #FAFAF9);
+    color: var(--foreground, #1C1917);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', var(--font-plus-jakarta), sans-serif;
+  }
+}
+
+/* ============================================
+   Utilities
+   ============================================ */
+@layer utilities {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto px-4 md:px-6 lg:px-8 max-w-7xl w-full;
+  }
+}
+
+/* Dark mode body override (absensi) */
+.dark body {
+  background-color: #0c0a09;
+  color: #f9efe8;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide Google Translate UI */
+.goog-te-banner-frame.skiptranslate { display: none !important; }
+body { top: 0px !important; }
+#google_translate_element { display: none !important; }
+.goog-te-gadget { display: none !important; }
+font { background-color: transparent !important; box-shadow: none !important; }
+
+
+/* Hide Google Translate UI */
+.goog-te-banner-frame.skiptranslate { display: none !important; }
+body { top: 0px !important; }
+#google_translate_element { display: none !important; }
+.goog-te-gadget { display: none !important; }
+font { background-color: transparent !important; box-shadow: none !important; }
+
